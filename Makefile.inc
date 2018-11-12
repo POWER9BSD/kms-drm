@@ -4,3 +4,8 @@
 .if defined(ENABLE_DRM_ERR_RET)
 CFLAGS+=	-DENABLE_DRM_ERR_RET
 .endif
+
+.if ${MACHINE_CPUARCH} == "powerpc"
+CFLAGS+= -DSMP
+CFLAGS+= -DAIM
+.endif
