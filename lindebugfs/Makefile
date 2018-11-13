@@ -10,5 +10,6 @@ SRCS=	vnode_if.h \
 CFLAGS+= -I${.CURDIR}/../linuxkpi/dummy/include
 CFLAGS+= -I${.CURDIR}/../linuxkpi/gplv2/include
 CFLAGS+= -I${SYSDIR}/compat/linuxkpi/common/include
+CFLAGS.gcc+= -Wno-cast-qual
 
 .include <bsd.kmod.mk>
